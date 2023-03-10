@@ -13,17 +13,6 @@ public class Grafi {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        
-        // Input: Lista degli archi
-	List<Arco> a = Arrays.asList(
-                new Arco(0, 1),
-                new Arco(1, 2),
-                new Arco(2, 0)
-        );
-
-	// costruzione di un grafo da una lista di archi
-	GrafoNO gno = new GrafoNO(a);
         
         List<Arco> b = Arrays.asList(
                 new Arco(0, 1), new Arco(0, 2),
@@ -33,8 +22,15 @@ public class Grafi {
         Grafo go = new Grafo(b);
         
 	// stampa delle adiacenze
-	GrafoNO.stampaGrafo(gno);
         Grafo.stampaGrafo(go);
+        
+        // esegui test e stampa de nuevo
+        System.out.println("\n");
+        go.addNodo(3);
+        go.addArco(2, 3);
+        go.addArco(3, 0);
+        Grafo.stampaGrafo(go);
+        
     }
     
 }

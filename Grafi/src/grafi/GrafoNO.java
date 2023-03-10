@@ -27,8 +27,10 @@ public class GrafoNO {
 
         // aggiunge nodi al grafo non-orientato
         for (Arco current: archi){
-            // alloca il nuovo arco nella lista di adiacenza da src a dest
+            // alloca il nuovo arco non orientato nella lista di adiacenza da src a dest
             adjList.get(current.src).add(current.dest);
+            adjList.get(current.dest).add(current.src);
+
 
 
         }
